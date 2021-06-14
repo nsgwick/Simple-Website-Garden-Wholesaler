@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Garden Wholesaler</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/prod05.png" />
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+  }
+
+  .shiny {
+    color: white;
+    position: relative;
+    border: none;
+    padding: 10px 15px;
+    background: #3984ff;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .shiny::after {
+    content: "";
+    position: absolute;
+    top: calc(var(--y, 0) * 1px - 50px);
+    left: calc(var(--x, 0) * 1px - 50px);
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#02c48a, #3984ff00 80%);
+
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .shiny:hover::after {
+    opacity: 1.4;
+  }
+
+  .header {
+    padding: 80px;
+    text-align: center;
+    background: #199c10;
+    background: url("img/banner.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: 120%;
+    color: #026b00;
+    text-shadow: 2px 2px #ffffff;
+  }
+  .hidelink{
+    color: inherit;
+    text-decoration: inherit;
+  }
+  .header h1 {
+    font-size: 40px;
+    transition: background-color 2s ease-out 100ms
+  }
+  .header h1:hover {
+    background-color: #cccccc;
+  }
+  .navbar {
+    overflow: hidden;
+    background-color: #7ede9d;
+    height: 75px;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #111111;
+    background-color: #a1ffb6;
+    text-align: center;
+    padding: 20px 50px;
+    text-decoration: none;
+    transition-duration: .3s;
+    transition: background-color 75ms ease-out 60ms
+    transition-property: all;
+  }
+  .navbar a.right {
+    float: right;
+  }
+  .navbar a:hover {
+    background-color: #2da148;
+    color: #ddd;
+    padding: 20px 50px;
+    font-weight: bolder;
+  }
+
+    /* Ensure proper sizing */
+  * {
+    box-sizing: border-box;
+  }
+
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%; /* Set the width of the sidebar */
+    background-color: #e0e0eb;
+    padding: 20px; /* Some padding */
+  }
+
+  /* Main column */
+  .main {
+    flex: 70%; /* Set the width of the main content */
+    background-color: #f0f0f5;
+    padding: 20px; /* Some padding */
+  }
+
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  .footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #c2c2d6;
+  }
+
+</style>
+</head>
+<body>
+  <a class="hidelink" href="#"><div class="header shiny">
+  <h1>Garden Wholesaler</h1>
+  <p>We meet all your gardening needs</p>
+</div></a>
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="index.html">About</a>
+    <a href="login.html">Login</a>
+    <a href="products.html">Products (temporary)</a>
+  </div>
+  <div class="row">
+    <div class="side">
+      <h2>About The Company</h2>
+      <img src="img/prod01.png" alt="Alternative Text" width=100%>
+      <p>Information about the company</p>
+    </div>
+    <div class="main">
+      <h1>Welcome</h1>
+      <p>Welcome message one…</p>
+      <img src="img/prod02.png" alt=" Alternative Text " width=49%>
+      <img src="img/prod03.png" alt=" Alternative Text " width=49%>
+      <p>Welcome message two...</p>
+    </div>
+  </div>
+  <div class="footer">
+    <h3>&copy; Garden Wholesalers</h3>
+  </div>
+
+
+  <script src="js/mouse.js"></script>
+
+</body>
+</html>
